@@ -78,7 +78,10 @@ message(STATUS "INSTALLATION SUPPORT")
 set(PILLOWRESIZE_INSTALLING PillowResize)
 
 # Specify the installation configuration directory
-set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
+set(INSTALL_CONFIGDIR ${BUILD_LIB}/${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
+
+set( CMAKE_INSTALL_LIBDIR ${BUILD_LIB}/${CMAKE_INSTALL_LIBDIR})
+set( CMAKE_INSTALL_INCLUDEDIR ${BUILD_LIB}/${CMAKE_INSTALL_INCLUDEDIR})
 
 # Installing Targets
 # (https://cmake.org/cmake/help/latest/command/install.html#installing-targets)
